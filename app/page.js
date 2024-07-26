@@ -48,7 +48,7 @@ export default function Home() {
     }
   };
   return (
-    <main className="p-5">
+    <main className="p-6">
       <Image
         src={logo}
         className="rounded-full"
@@ -94,6 +94,15 @@ export default function Home() {
         <p className="font-bold text-xl text-center">{conseils}</p>
         <p className="text-red-600">{isError ? messageError : ""}</p>
       </form>
+      <p className="text-center">
+        Designed by{" "}
+        <a
+          className="text-blue-600"
+          href="https://www.linkedin.com/in/gloire-fiyss-baz-s-4022ba271/"
+        >
+          Gloire Dev
+        </a>
+      </p>
     </main>
   );
 }
