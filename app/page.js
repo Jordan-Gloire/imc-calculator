@@ -50,19 +50,12 @@ export default function Home() {
   return (
     <main className="p-5">
       <Image
-        className="w-screen h-32 object-cover "
-        src={top}
-        alt="logo"
-        width={100}
-        height={100}
-      />
-      {/* <Image
         src={logo}
         className="rounded-full"
         alt="logo"
         width={100}
         height={100}
-      /> */}
+      />
       <h1 className="text-4xl font-bold py-6 text-blue-900">
         {"Calculateur d'IMC"}
       </h1>
