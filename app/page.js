@@ -4,6 +4,7 @@ import { useState } from "react";
 import logo from "../public/congoLogo.jpg";
 import top from "../public/poids (3).jpg";
 import Link from "next/link";
+import { MedicineBoxOutlined, UserOutlined } from "@ant-design/icons";
 import "animate.css";
 export default function Home() {
   const [isError, setIsError] = useState(false);
@@ -66,27 +67,27 @@ export default function Home() {
         kg) et votre taille (en cm)
       </p>
       <form className="flex flex-col justify-center items-center space-y-3 animate__animated animate__fadeInRight">
-        <div className="flex flex-col justify-center items-center space-y-5">
+        <div className="space-y-4">
           <label className=" font-bold">Poids (en kg)</label>
           <input
             value={poids}
             onChange={(e) => setPoids(e.target.value)}
             name="poids"
-            className="py-3 px-6 rounded-md bg-slate-200 font-bold"
+            className="py-3 w-full px-6 rounded-md bg-slate-200 font-bold"
             type="number"
           />
-          <label className=" font-bold">Taille (en cm)</label>
+          <label className="font-bold">Taille (en cm)</label>
           <input
             onChange={(e) => setTail(e.target.value)}
             value={tail}
             name="tail"
-            className="py-3 px-6 rounded-md bg-slate-200 font-bold"
+            className="py-3 px-6 rounded-md w-full bg-slate-200 font-bold"
             type="number"
           />
         </div>
         <button
           onClick={votreImc}
-          className="py-3 px-6 rounded-md bg-blue-700 hover:bg-blue-800 duration-300 ease-linear text-white"
+          className="py-3 px-6  w-full rounded-md bg-blue-700 hover:bg-blue-800 duration-300 ease-linear text-white"
           type="submit"
         >
           Calculer votre IMC
@@ -96,9 +97,11 @@ export default function Home() {
         <p className="font-bold text-xl text-center">{conseils}</p>
         <p className="text-red-600">{isError ? messageError : ""}</p>
         <Link
-          className=" py-3 px-6 rounded-md bg-blue-900 hover:bg-blue-800 duration-300 ease-linear text-white"
+          className="w-full text-2xl  flex justify-center  items-center py-3 px-6 rounded-md bg-red-600 hover:bg-blue-800 duration-300 ease-linear text-white"
           href="/Medecins"
         >
+          <MedicineBoxOutlined className="pr-4 " />
+          {/* <UserOutlined className="text-2xl" /> */}
           Consulter un medecin
         </Link>
       </form>
