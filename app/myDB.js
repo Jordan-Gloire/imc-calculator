@@ -1,0 +1,51 @@
+const dataBaseMedecins = [
+  {
+    id: 1,
+    nom_complet: "GOUMA Melvie",
+    specialite: "Cardiologue",
+    adresse: "78 Rue de la piscine / Diat / Brazzaville",
+    telephone: "+242 066 010436",
+    image: "/dr.jpg",
+  },
+  {
+    id: 2,
+    nom_complet: "BAZ'S Fideliat",
+    specialite: "Dr Nutritionniste",
+    adresse: "1123 Rue de la Liberte / Moungali / Brazzaville",
+    telephone: "555-1234",
+    image: "/dr2.jpg",
+  },
+  {
+    id: 3,
+    nom_complet: "John Doe",
+    specialite: "Dr Nutritionniste",
+    adresse: "12 Rue Mont Blanc / Ouenzé / Brazzaville",
+    telephone: "242 066 010436",
+    image: "/dr3.jpg",
+  },
+  {
+    id: 4,
+    nom_complet: "MOMBOU Josy",
+    specialite: "Dr Nutritionniste",
+    adresse: "3 Rue de la Justice / M'filou / Brazzaville",
+    telephone: "242 066 010436",
+    image: "/dr4.jpg",
+  },
+  {
+    id: 5,
+    nom_complet: "MILONGO Bonheur",
+    specialite: "Cardiologue",
+    adresse: "13 Rue de la Gloire / Moukondo / Brazzaville",
+    telephone: "+242 066 579175",
+    image: "/home8.png",
+  },
+  {
+    id: 6,
+    nom_complet: "BAZ'S Fiyss",
+    specialite: "Dr Nutritionniste",
+    adresse: "123 Rue de la Liberte / Talalgai / Brazzaville",
+    telephone: "+242 066 010436",
+    image: "/home2.jpg",
+  },
+];
+export default dataBaseMedecins;

@@ -3,6 +3,8 @@ import Image from "next/image";
 import { useState } from "react";
 import logo from "../public/congoLogo.jpg";
 import top from "../public/poids (3).jpg";
+import Link from "next/link";
+import "animate.css";
 export default function Home() {
   const [isError, setIsError] = useState(false);
   const [messageError, setMessageError] = useState("");
@@ -48,7 +50,7 @@ export default function Home() {
     }
   };
   return (
-    <main className="p-6">
+    <main className="p-6 animate__animated animate__fadeIn">
       <Image
         src={logo}
         className="rounded-full"
@@ -63,7 +65,7 @@ export default function Home() {
         Calculez votre indice de masse corporelle en indiquant votre poids (en
         kg) et votre taille (en cm)
       </p>
-      <form className="flex flex-col justify-center items-center space-y-3">
+      <form className="flex flex-col justify-center items-center space-y-3 animate__animated animate__fadeInRight">
         <div className="flex flex-col justify-center items-center space-y-5">
           <label className=" font-bold">Poids (en kg)</label>
           <input
@@ -93,16 +95,13 @@ export default function Home() {
         <p className="font-bold text-5xl">{imc}</p>
         <p className="font-bold text-xl text-center">{conseils}</p>
         <p className="text-red-600">{isError ? messageError : ""}</p>
-      </form>
-      <p className="text-center">
-        Designed by{" "}
-        <a
-          className="text-blue-600"
-          href="https://www.linkedin.com/in/gloire-fiyss-baz-s-4022ba271/"
+        <Link
+          className=" py-3 px-6 rounded-md bg-blue-900 hover:bg-blue-800 duration-300 ease-linear text-white"
+          href="/Medecins"
         >
-          Gloire Dev
-        </a>
-      </p>
+          Consulter un medecin
+        </Link>
+      </form>
     </main>
   );
 }
