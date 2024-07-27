@@ -1,9 +1,11 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import HomeImg from "/public/home4.jpg";
 import mydb from "../myDB";
 import Link from "next/link";
 import "animate.css";
+
 import { ArrowLeftOutlined } from "@ant-design/icons";
 function Medecins() {
   return (
